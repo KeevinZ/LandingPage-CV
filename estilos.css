@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg-dark: #0b0f19;
     --blue-1: #1f2a48;
@@ -10,6 +14,7 @@
     --text-muted: #9aa5b1;
     --font-primary: 'Inter', Arial, sans-serif;
 }
+
 
 * {
     margin: 0;
@@ -25,7 +30,7 @@ body {
 }
 
 .container {
-    max-width:768px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 0 2em;
 }
@@ -53,23 +58,29 @@ header {
     padding: 1rem 0;
 }
 
-nav > ul {
+nav>ul {
     list-style: none;
-    display: flex ;
-    justify-content: center;
-    gap: 1rem; 
-    flex-wrap: wrap; 
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-nav > a {
+nav>a {
     font-weight: 600px;
-    padding: 0.5rem 0.75rem; 
+    padding: 0.5rem 0.75rem;
 }
- 
-.box-img{
+
+ul>li {
+    border: 2px solid #0000003d;
+    border-radius: 5px;
+    padding: 0 2rem;
+}
+
+.box-img {
     padding-top: 50px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -82,7 +93,7 @@ nav > a {
 }
 
 
-.text-perfil{
+.text-perfil {
     text-align: center;
 }
 
@@ -99,13 +110,13 @@ p {
     font-size: 1.1rem;
 }
 
-strong{
+strong {
     color: var(--cyan1);
 }
 
 
 section {
-    padding: 4rem 0;
+    padding: 4rem 20px;
 }
 
 h2 {
@@ -126,16 +137,23 @@ h2::after {
 
 
 #sobre {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     text-align: center;
+
+    background-color: #151c305d;
 }
 
 .texto {
     max-width: 800px;
     color: var(--text-muted);
+}
+
+#sobre,
+#habilidades {
+    background-color: #151c305d;
 }
 
 .skills-container {
@@ -148,7 +166,7 @@ h2::after {
     color: var(--accent);
     margin-bottom: 1rem;
     font-size: 1.25rem;
-    text-align: center; 
+    text-align: center;
 }
 
 .skill {
@@ -181,10 +199,10 @@ h2::after {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 2fr;
-  gap: 1.5rem;
-  padding: 0 3em;
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 1.5rem;
+    padding: 0 3em;
 }
 
 
@@ -211,7 +229,7 @@ h2::after {
     color: var(--text-muted);
 }
 
-footer{
+footer {
     padding: 4rem;
     display: flex;
     flex-direction: column;
@@ -219,10 +237,110 @@ footer{
     background-color: #151e36;
 }
 
-footer > div{
+footer>div {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
+
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+
+    section {
+        padding: 2em 4em;
+    }
+
+    .grid,
+    .skills-container {
+        gap: 1rem;
+    }
+
+
+    .perfil {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 4rem 2em;
+    }
+
+    .text-perfil {
+        flex: 1;
+        text-align: left;
+    }
+
+    .box-img {
+        flex: 1;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-perfil {
+        width: 320px;
+        height: 320px;
+    }
+
+
+    .sobre-section .sobre-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .sobre-texto {
+        flex: 1;
+        text-align: left;
+    }
+
+    .sobre-imagem {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .sobre-imagem img {
+        width: 220px;
+        height: 300px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    #sobre,
+    #habilidades {
+        background-color: #151c305d;
+    }
+
+
+    #projetos .grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding: 0 2em;
+    }
+
+
+    #habilidades .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 0 2em;
+    }
+
+
+    .hero h1,
+    .text-perfil h1 {
+        font-size: 3rem;
+    }
+
+    .hero p,
+    .text-perfil p {
+        font-size: 1.2rem;
+    }
+}
