@@ -95,6 +95,11 @@ li:hover a{
     align-items: center;
 }
 
+.perfil{
+    background-color: #151c305d;
+    margin-top: 10px;
+}
+
 .img-perfil {
     width: clamp(180px, 60vw, 400px);
     height: clamp(180px, 60vw, 400px);
@@ -126,7 +131,7 @@ strong {
 
 
 section {
-    padding: 4rem 20px;
+    padding: 5rem 20px;
 }
 
 h2 {
@@ -152,8 +157,6 @@ h2::after {
     align-items: center;
     gap: 2rem;
     text-align: center;
-
-    background-color: #151c305d;
 }
 
 .texto {
@@ -161,7 +164,6 @@ h2::after {
     color: var(--text-muted);
 }
 
-#sobre,
 #habilidades {
     background-color: #151c305d;
 }
@@ -212,7 +214,7 @@ h2::after {
     display: grid;
     grid-template-columns: 2fr;
     gap: 1.5rem;
-    padding: 0 1em;
+    padding: 0 auto;
 }
 
 
@@ -251,7 +253,9 @@ h2::after {
   padding: 0.75rem 1.25rem;
   width: 100%;
   border-radius: 20px;
-  border: none;  
+  border: none; 
+  font-weight: bold;
+  font-size: medium; 
 }
  
 
@@ -306,7 +310,7 @@ footer>div {
 
 
     section {
-        padding: 2em 4em;
+        padding: 8em 4em;
     }
 
     .grid,
@@ -321,6 +325,7 @@ footer>div {
         justify-content: space-between;
         gap: 2rem;
         padding: 4rem 2em;
+        margin: 10px;
     }
 
     .text-perfil {
@@ -368,7 +373,6 @@ footer>div {
         object-fit: cover;
     }
 
-    #sobre,
     #habilidades {
         background-color: #151c305d;
     }
